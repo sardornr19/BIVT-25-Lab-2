@@ -1,4 +1,4 @@
-﻿namespace Lab2
+namespace Lab2
 {
     public class White
     {
@@ -6,85 +6,90 @@
         public int Task1(int n)
         {
             int answer = 0;
-
-            // code here
-
-            // end
-
+            for (int i = 1; i <= n; i++)
+            {
+                answer += 3 * i - 1;
+            }
             return answer;
         }
         public double Task2(int n)
         {
             double answer = 0;
-
-            // code here
-
-            // end
-
+            for (int i = 1; i <= n; i++)
+            {
+                answer += 1.0 / i;
+            }
             return answer;
         }
         public long Task3(int n)
         {
-            long answer = 0;
-
-            // code here
-
-            // end
-
+            long answer = 1;
+            for (int i = 2; i <= n; i++)
+            {
+                answer *= i;
+            }
             return answer;
         }
         public long Task4(int a, int b)
         {
-            long answer = 0;
-
-            // code here
-
-            // end
-
+            long answer = 1;
+            for (int i = 1; i <= b; i++)
+            {
+                answer *= a;
+            }
             return answer;
         }
         public int Task5(int L)
         {
-            int answer = 0;
-
-            // code here
-
-            // end
-
+            int answer = 1;
+            long product = 1;
+            while (product <= L)
+            {
+                product *= answer;
+                answer += 3;
+            }
+            answer -= 3;
             return answer;
         }
         public double Task6(double x)
         {
-            double answer = 0;
-
-            // code here
-
-            // end
-
+            double answer = 1.0;
+            double term = 1.0;
+            int n = 1;
+            while (true)
+            {
+                term *= x * x;
+                if (term < E)
+                    break;
+                answer += term;
+                n++;
+            }
             return answer;
         }
 
         public int Task7(int n)
         {
             int answer = 0;
-
-            // code here
-
-            // end
-
+            for (int i = 1; i <= n; i++)
+            {
+                if (i % 2 == 0)
+                    answer += i;
+                else
+                    answer -= i;
+            }
             return answer;
         }
+
         public int Task8(double L, double v)
         {
             int answer = 0;
             const double R = 6371.0; // радиус Земли, км
-
-            // code here
-
-            // end
-
+            double time = L / v;
+            if (time <= 3.0)
+                answer = 1; 
+            else
+                answer = 0; 
             return answer;
         }
     }
-
 }
